@@ -1,0 +1,60 @@
+@import "../../../Scss/mixin";
+@import "../../../Scss/var";
+
+.hero__section {
+    @include flexprops(flex, center, space-around);
+    position: relative;
+}
+
+.hero__info {
+    @include flexprops(flex, flex-start, center);
+    flex-direction: column;
+    padding-left: 121px;
+}
+
+.hero__heading {
+    @include fontprops(40px, 900);
+}
+
+.hero__sub {
+    font-size: 18px;
+    width: 520px;
+}
+
+.hero__btn {
+    margin-top: 62px;
+    z-index: 3;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 426px) {
+    .hero__heading {
+        font-size: 30px;
+    }
+
+    .hero__sub {
+        width: fit-content;
+    }
+
+    .hero__info {
+        padding-top: $padding-top;
+    }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .hero__info {
+        z-index: 1;
+        padding-left: 0;
+    }
+
+    .hero__img {
+        right: 10%;
+        position: absolute;
+        opacity: 0.3;
+    }
+
+    .hero__info {
+        padding-top: $padding-top;
+    }
+}

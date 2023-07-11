@@ -1,0 +1,37 @@
+.client__section {
+  padding-bottom: 12rem;
+  padding-top: 6rem;
+}
+
+.client__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 9rem;
+}
+
+.client__main-heading {
+  text-align: center;
+}
+
+.client-info {
+  text-align: center;
+}
+
+.client__name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.client1__img {
+  background-color: rgba(191, 191, 191, 0.655);
+}
+
+@media only screen and (max-width: 426px) {
+  .client__container {
+    flex-direction: column;
+    gap: 6rem;
+  }
+}/*# sourceMappingURL=clients.css.map */

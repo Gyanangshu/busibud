@@ -1,0 +1,44 @@
+.service__section {
+  padding-bottom: 4rem;
+}
+
+.service__heading {
+  text-align: center;
+  background-color: #F8FAFC;
+  padding-bottom: 4rem;
+  padding-top: 11.06rem;
+}
+
+.service__heading-link {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.service__cards {
+  position: relative;
+  bottom: 90px;
+  width: 100%;
+  display: flex;
+  align-items: none;
+  justify-content: space-evenly;
+}
+
+.service-card {
+  width: 308px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: none;
+  flex-direction: column;
+}
+
+.mg {
+  margin-top: 2.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .service__cards {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 2rem;
+  }
+}/*# sourceMappingURL=services.css.map */

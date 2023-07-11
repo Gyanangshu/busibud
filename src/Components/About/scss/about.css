@@ -1,0 +1,70 @@
+.about__section {
+  width: 100%;
+  background: #F8FAFC;
+}
+
+.wave {
+  height: 250px;
+  width: 100%;
+  bottom: none;
+  left: none;
+  position: absolute;
+  top: 478px;
+}
+
+.about__heading {
+  text-align: center;
+  padding-top: 8rem;
+}
+
+.about__cards {
+  display: flex;
+  align-items: none;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding-top: 3.75rem;
+}
+
+.card {
+  height: 308px;
+  width: 320px;
+  bottom: none;
+  left: none;
+  background-color: white;
+  border-radius: 19px;
+  padding: 38px 14px 48px 19px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+
+@media only screen and (max-width: 321px) {
+  .about__heading {
+    padding-top: 4rem;
+  }
+  .wave {
+    top: 500px;
+  }
+}
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+  .wave {
+    top: 300px;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 426px) {
+  .wave {
+    top: 375pxpx;
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+  .about__heading {
+    padding-top: 4rem;
+  }
+  .wave {
+    top: 375px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .wave {
+    top: 368px;
+  }
+}/*# sourceMappingURL=about.css.map */

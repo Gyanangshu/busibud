@@ -1,0 +1,28 @@
+@mixin fontprops($fontsize, $fontweight){
+    font-size: $fontsize;
+    font-weight: $fontweight;
+}
+
+@mixin displayprops($flex, $align, $justify){
+    display: $flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin box{
+    text-align: left;
+    align-items: flex-start;
+    margin: 0px 0px 0px auto;
+}
+
+@mixin padding-inline($start, $end){
+    padding-inline-start: $start;
+    padding-inline-end: $end;
+}
+
+@mixin dimensions($height, $width, $bottom, $left){
+    height: $height;
+    width: $width;
+    bottom: $bottom;
+    left: $left;
+}

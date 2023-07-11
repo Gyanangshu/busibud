@@ -1,0 +1,52 @@
+@import "var";
+@import "mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button {
+    @include fontprops(23px, normal);
+    color: white;
+    background: #1492E6;
+    border-radius: 33px;
+    width: 247px;
+    height: 65px;
+    padding: 17px 49px 17px 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 16px 48px #00000029;
+}
+
+.section__heading {
+    @include fontprops(35px, bold);
+}
+
+.card__heading {
+    @include fontprops(18px, bold);
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.card__content {
+    @include fontprops(15px, 600);
+    line-height: 28px;
+}

@@ -1,0 +1,69 @@
+@import "../../../Scss/var";
+@import "../../../Scss/mixin";
+
+.laurel__section {
+    padding-bottom: 4rem;
+}
+
+.laurels__container {
+    margin-top: 5.3rem;
+}
+
+.laurel__heading {
+    text-align: center;
+}
+
+.laurel1__box,
+.laurel2__box,
+.laurel3__box,
+.laurel4__box {
+    width: 500px;
+}
+
+.laurel2__box {
+    @include box;
+}
+
+.laurel4__box {
+    @include box;
+}
+
+.box-top {
+    @include displayprops(flex, center, none);
+    gap: 39px;
+}
+
+.lauel__box-heading {
+    font-size: $font-size + 3px !important;
+}
+
+.laurel__box-content {
+    font-size: $font-size;
+}
+
+@media only screen and (max-width: 376px) {
+    .box-top {
+        gap: 10px;
+    }
+
+    .lauel__box-heading {
+        font-size: $font-size !important;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    .laurel1__box,
+    .laurel2__box,
+    .laurel3__box,
+    .laurel4__box {
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .laurels__container {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+}

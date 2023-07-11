@@ -1,0 +1,166 @@
+@import "../../../Scss/mixin";
+@import "../../../Scss/var";
+
+.nav__section {
+    @include displayprops(flex, center, center);
+    flex-direction: column;
+    padding: $size 0 0 0;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.nav__components-list {
+    display: flex;
+    gap: $size + $size;
+    margin-top: 1.75rem;
+}
+
+.nav__components-list-links{
+    @include fontprops(1.18rem, 600);
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    & a:hover {
+        background-color: #ddd;
+    }
+
+    & a {
+        display: flex;
+        padding: 0.5rem;
+    }
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+
+    & .dropbtn {
+        @include displayprops(flex, center, none);
+        gap: 0.3rem;
+        border: none;
+        outline: none;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    &:hover .dropdown-content {
+        display: block;
+    }
+
+}
+
+// --------------hamburger menu------------------- 
+.nav__smallscreen {
+    display: none;
+}
+
+.nav__smallscreen__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    transition: 0.5s ease;
+    flex-direction: column;
+    z-index: 5;
+
+    & .over__close {
+        font-size: 27px;
+        color: black;
+        cursor: pointer;   
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.nav__smallscreen-links {
+    list-style: none;
+
+    & li{
+        margin: $size;
+        cursor: pointer;
+        color: black;
+        font-size: $size;
+        text-align: center;
+    }
+}
+
+.flex__center {
+    @include displayprops(flex, center, center);
+}
+
+.slide-bottom {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(-25%);
+        transform: translateY(-25%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+ 
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(-25%);
+        transform: translateY(-25%);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+/* media queries for dirrerent screen sizes  */
+@media screen and (max-width: 2000px) {
+    .nav__logo {
+        width: 210px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .nav__components-list {
+        display: none;
+    }
+    .nav__smallscreen {
+        display: flex;
+    }
+    .nav__section {
+        @include displayprops(flex, center, space-between);
+        padding: 1rem;
+        flex-direction: row;
+    }
+    .dropdown__nav {
+        @include displayprops(flex, center, none);
+        flex-direction: column;
+        gap: $size;
+    }
+    .dropdown .dropbtn {
+        gap: 0;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .nav__smallscreen-links {
+        padding-left: 0;
+        & li{
+            font-size: 1.1rem;
+        }
+    }
+}

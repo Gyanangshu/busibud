@@ -1,0 +1,147 @@
+.nav__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 0 0 0;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
+.nav__components-list {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1.75rem;
+}
+
+.nav__components-list-links {
+  font-size: 1.18rem;
+  font-weight: 600;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown-content a {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  gap: 0.3rem;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav__smallscreen {
+  display: none;
+}
+
+.nav__smallscreen__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  transition: 0.5s ease;
+  flex-direction: column;
+  z-index: 5;
+}
+.nav__smallscreen__overlay .over__close {
+  font-size: 27px;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav__smallscreen-links {
+  list-style: none;
+}
+.nav__smallscreen-links li {
+  margin: 2rem;
+  cursor: pointer;
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.flex__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-bottom {
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* media queries for dirrerent screen sizes  */
+@media screen and (max-width: 2000px) {
+  .nav__logo {
+    width: 210px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .nav__components-list {
+    display: none;
+  }
+  .nav__smallscreen {
+    display: flex;
+  }
+  .nav__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    flex-direction: row;
+  }
+  .dropdown__nav {
+    display: flex;
+    align-items: center;
+    justify-content: none;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .dropdown .dropbtn {
+    gap: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .nav__smallscreen-links {
+    padding-left: 0;
+  }
+  .nav__smallscreen-links li {
+    font-size: 1.1rem;
+  }
+}/*# sourceMappingURL=navbar.css.map */

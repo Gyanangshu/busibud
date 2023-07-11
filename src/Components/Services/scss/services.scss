@@ -1,0 +1,43 @@
+@import "../../../Scss/mixin";
+@import "../../../Scss/var";
+
+.service__section {
+    padding-bottom: $padding-bottom;
+}
+
+.service__heading {
+    text-align: center;
+    background-color: #F8FAFC;
+    padding-bottom: $padding-bottom;
+    padding-top: 11.06rem;
+}
+
+.service__heading-link {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.service__cards {
+    position: relative;
+    bottom: 90px;
+    width: 100%;
+    @include displayprops(flex, none, space-evenly);
+}
+
+.service-card {
+    width: 308px;
+    @include displayprops(flex, flex-start, none);
+    flex-direction: column;
+}
+
+.mg{
+    margin-top: 2.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .service__cards {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 2rem;
+    }
+}
